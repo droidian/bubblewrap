@@ -26,7 +26,6 @@ override_dh_auto_test:
 	# Remove LD_PRELOAD so we don't run with faketime. It uses
 	# sem_open(), but bubblewrap runs in an environment where that
 	# can't work.
-	env -u LD_PRELOAD dh_auto_test
 
 .PHONY: override_dh_auto_test
 
